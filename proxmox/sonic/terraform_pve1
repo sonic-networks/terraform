@@ -1,0 +1,2 @@
+export TF_VAR_TF_PROXMOX_API_SECRET=$(security find-generic-password -l 'terraform_proxmox_pve1' -w)
+export TF_VAR_TF_PROXMOX_API_ID="hashicorp@pve!terraform"

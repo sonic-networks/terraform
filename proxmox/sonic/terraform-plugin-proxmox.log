@@ -1,0 +1,325 @@
+[90mSat, 03 Feb 2024 14:32:47 +0100[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/proxmox/util.go:155[0m[36m >[0m Enabling the capture of log-library logs as ithe _capturelog flag was detected
+[90mSat, 03 Feb 2024 14:32:47 +0100[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/proxmox/util.go:188[0m[36m >[0m Logging Started. Root Logger Set to level debug
+[90mSat, 03 Feb 2024 14:32:49 +0100[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/proxmox/util.go:155[0m[36m >[0m Enabling the capture of log-library logs as ithe _capturelog flag was detected
+[90mSat, 03 Feb 2024 14:32:49 +0100[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/proxmox/util.go:188[0m[36m >[0m Logging Started. Root Logger Set to level debug
+2024/02/03 14:32:49 [DEBUG] setting computed for "unused_disk" from ComputedKeys
+[90mSat, 03 Feb 2024 14:32:49 +0100[0m [33mDBG[0m [1mgithub.com/Telmate/terraform-provider-proxmox/proxmox/resource_vm_qemu.go:774[0m[36m >[0m Invoking VM create with resource data:  '{"additional_wait":0,"agent":1,"args":"","automatic_reboot":true,"balloon":0,"bios":"seabios","boot":"c","bootdisk":"","bridge":"","ci_wait":0,"cicustom":"user=local:snippets/user-data_vm-srv-app-1.yaml,network=local:snippets/network-config_vm-srv-app-1.yaml","cipassword":"","ciuser":"","clone":"debian-12-amd64-cloudinit-template","clone_wait":0,"cloudinit_cdrom_storage":"local","cores":4,"cpu":"host","default_ipv4_address":"","define_connection_info":true,"desc":"","disk":[{"aio":"","backup":0,"cache":"none","discard":"","file":"","format":"","iops":0,"iops_max":0,"iops_max_length":0,"iops_rd":0,"iops_rd_max":0,"iops_rd_max_length":0,"iops_wr":0,"iops_wr_max":0,"iops_wr_max_length":0,"iothread":0,"mbps":0,"mbps_rd":0,"mbps_rd_max":0,"mbps_wr":0,"mbps_wr_max":0,"media":"","replicate":0,"size":"15G","slot":0,"ssd":1,"storage":"vms","storage_type":"","type":"scsi","volume":""}],"disk_gb":0,"force_create":false,"force_recreate_on_change_of":"","full_clone":true,"guest_agent_ready_timeout":100,"hagroup":"","hastate":"","hotplug":"network,disk,usb","ipconfig0":"","ipconfig1":"","ipconfig2":"","ipconfig3":"","ipconfig4":"","ipconfig5":"","iso":"","kvm":true,"mac":"","memory":8192,"name":"srv-app-1","nameserver":"","network":[{"bridge":"skynet","firewall":false,"link_down":false,"macaddr":"00:1E:67:01:10:01","model":"virtio","mtu":0,"queues":0,"rate":0,"tag":-1}],"nic":"","numa":false,"onboot":false,"oncreate":true,"os_network_config":"","os_type":"cloud-init","pool":"","preprovision":true,"pxe":false,"qemu_os":"","reboot_required":false,"scsihw":"virtio-scsi-pci","searchdomain":"","serial":[],"sockets":1,"ssh_forward_ip":"","ssh_host":"","ssh_port":"","ssh_private_key":"","ssh_user":"","sshkeys":"","startup":"","storage":"","storage_type":"","tablet":true,"tags":"","target_node":"pve1-hw","unused_disk":[],"usb":[],"vcpus":0,"vga":[],"vlan":-1,"vmid":0}' [36mloggerName=[0mresource_vm_create [36mvmid=[0m
+2024/02/03 14:32:49 [DEBUG][QemuVmCreate] checking for duplicate name: srv-app-1
+2024/02/03 14:32:49 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 10.0.1.1:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=hashicorp@pve!terraform=37d8880f-f5f1-40df-8130-ad9ca3ddcaa4
+Accept-Encoding: gzip
+
+2024/02/03 14:32:49 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 11
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 03 Feb 2024 13:32:49 GMT
+Expires: Sat, 03 Feb 2024 13:32:49 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[]}
+2024/02/03 14:32:49 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/nextid HTTP/1.1
+Host: 10.0.1.1:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=hashicorp@pve!terraform=37d8880f-f5f1-40df-8130-ad9ca3ddcaa4
+Accept-Encoding: gzip
+
+2024/02/03 14:32:49 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 14
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 03 Feb 2024 13:32:49 GMT
+Expires: Sat, 03 Feb 2024 13:32:49 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":"100"}
+2024/02/03 14:32:49 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 10.0.1.1:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=hashicorp@pve!terraform=37d8880f-f5f1-40df-8130-ad9ca3ddcaa4
+Accept-Encoding: gzip
+
+2024/02/03 14:32:49 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 11
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 03 Feb 2024 13:32:49 GMT
+Expires: Sat, 03 Feb 2024 13:32:49 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[]}
+[90mSat, 03 Feb 2024 14:38:30 +0100[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/proxmox/util.go:155[0m[36m >[0m Enabling the capture of log-library logs as ithe _capturelog flag was detected
+[90mSat, 03 Feb 2024 14:38:30 +0100[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/proxmox/util.go:188[0m[36m >[0m Logging Started. Root Logger Set to level debug
+[90mSat, 03 Feb 2024 14:38:32 +0100[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/proxmox/util.go:155[0m[36m >[0m Enabling the capture of log-library logs as ithe _capturelog flag was detected
+[90mSat, 03 Feb 2024 14:38:32 +0100[0m [32mINF[0m [1mgithub.com/Telmate/terraform-provider-proxmox/proxmox/util.go:188[0m[36m >[0m Logging Started. Root Logger Set to level debug
+2024/02/03 14:38:32 [DEBUG] setting computed for "unused_disk" from ComputedKeys
+[90mSat, 03 Feb 2024 14:38:32 +0100[0m [33mDBG[0m [1mgithub.com/Telmate/terraform-provider-proxmox/proxmox/resource_vm_qemu.go:774[0m[36m >[0m Invoking VM create with resource data:  '{"additional_wait":0,"agent":1,"args":"","automatic_reboot":true,"balloon":0,"bios":"seabios","boot":"c","bootdisk":"","bridge":"","ci_wait":0,"cicustom":"user=local:snippets/user-data_vm-srv-app-1.yaml,network=local:snippets/network-config_vm-srv-app-1.yaml","cipassword":"","ciuser":"","clone":"debian-12-amd64-cloudinit-template","clone_wait":0,"cloudinit_cdrom_storage":"local","cores":4,"cpu":"host","default_ipv4_address":"","define_connection_info":true,"desc":"","disk":[{"aio":"","backup":0,"cache":"none","discard":"","file":"","format":"","iops":0,"iops_max":0,"iops_max_length":0,"iops_rd":0,"iops_rd_max":0,"iops_rd_max_length":0,"iops_wr":0,"iops_wr_max":0,"iops_wr_max_length":0,"iothread":0,"mbps":0,"mbps_rd":0,"mbps_rd_max":0,"mbps_wr":0,"mbps_wr_max":0,"media":"","replicate":0,"size":"15G","slot":0,"ssd":1,"storage":"vms","storage_type":"","type":"scsi","volume":""}],"disk_gb":0,"force_create":false,"force_recreate_on_change_of":"","full_clone":true,"guest_agent_ready_timeout":100,"hagroup":"","hastate":"","hotplug":"network,disk,usb","ipconfig0":"","ipconfig1":"","ipconfig2":"","ipconfig3":"","ipconfig4":"","ipconfig5":"","iso":"","kvm":true,"mac":"","memory":8192,"name":"srv-app-1","nameserver":"","network":[{"bridge":"skynet","firewall":false,"link_down":false,"macaddr":"00:1E:67:01:10:01","model":"virtio","mtu":0,"queues":0,"rate":0,"tag":-1}],"nic":"","numa":false,"onboot":false,"oncreate":true,"os_network_config":"","os_type":"cloud-init","pool":"","preprovision":true,"pxe":false,"qemu_os":"","reboot_required":false,"scsihw":"virtio-scsi-pci","searchdomain":"","serial":[],"sockets":1,"ssh_forward_ip":"","ssh_host":"","ssh_port":"","ssh_private_key":"","ssh_user":"","sshkeys":"","startup":"","storage":"","storage_type":"","tablet":true,"tags":"","target_node":"pve1-hw","unused_disk":[],"usb":[],"vcpus":0,"vga":[],"vlan":-1,"vmid":0}' [36mloggerName=[0mresource_vm_create [36mvmid=[0m
+2024/02/03 14:38:32 [DEBUG][QemuVmCreate] checking for duplicate name: srv-app-1
+2024/02/03 14:38:32 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 10.0.1.1:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=hashicorp@pve!terraform=37d8880f-f5f1-40df-8130-ad9ca3ddcaa4
+Accept-Encoding: gzip
+
+2024/02/03 14:38:32 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 554
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 03 Feb 2024 13:38:32 GMT
+Expires: Sat, 03 Feb 2024 13:38:32 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"template":1,"netout":0,"name":"ubuntu-2004-cloudinit-template","mem":0,"maxcpu":1,"disk":0,"maxmem":1073741824,"id":"qemu/1000","diskwrite":0,"netin":0,"status":"stopped","type":"qemu","vmid":1000,"uptime":0,"diskread":0,"cpu":0,"maxdisk":2361393152,"node":"pve1-hw"},{"vmid":1001,"status":"stopped","type":"qemu","diskread":0,"uptime":0,"cpu":0,"node":"pve1-hw","maxdisk":2147483648,"template":1,"netout":0,"name":"debian-12-amd64-cloudinit-template","maxmem":1073741824,"disk":0,"id":"qemu/1001","maxcpu":1,"mem":0,"netin":0,"diskwrite":0}]}
+2024/02/03 14:38:32 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/nextid HTTP/1.1
+Host: 10.0.1.1:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=hashicorp@pve!terraform=37d8880f-f5f1-40df-8130-ad9ca3ddcaa4
+Accept-Encoding: gzip
+
+2024/02/03 14:38:32 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 14
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 03 Feb 2024 13:38:32 GMT
+Expires: Sat, 03 Feb 2024 13:38:32 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":"100"}
+2024/02/03 14:38:32 >>>>>>>>>> REQUEST:
+GET /api2/json/cluster/resources?type=vm HTTP/1.1
+Host: 10.0.1.1:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=hashicorp@pve!terraform=37d8880f-f5f1-40df-8130-ad9ca3ddcaa4
+Accept-Encoding: gzip
+
+2024/02/03 14:38:32 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 554
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 03 Feb 2024 13:38:32 GMT
+Expires: Sat, 03 Feb 2024 13:38:32 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":[{"netin":0,"diskwrite":0,"disk":0,"maxmem":1073741824,"id":"qemu/1000","mem":0,"maxcpu":1,"template":1,"name":"ubuntu-2004-cloudinit-template","netout":0,"node":"pve1-hw","maxdisk":2361393152,"cpu":0,"diskread":0,"uptime":0,"vmid":1000,"status":"stopped","type":"qemu"},{"vmid":1001,"status":"stopped","type":"qemu","diskread":0,"uptime":0,"cpu":0,"node":"pve1-hw","maxdisk":2147483648,"template":1,"name":"debian-12-amd64-cloudinit-template","netout":0,"disk":0,"maxmem":1073741824,"id":"qemu/1001","mem":0,"maxcpu":1,"netin":0,"diskwrite":0}]}
+2024/02/03 14:38:32 [DEBUG][QemuVmCreate] cloning VM
+2024/02/03 14:38:32 >>>>>>>>>> REQUEST:
+POST /api2/json/nodes/pve1-hw/qemu/1001/clone HTTP/1.1
+Host: 10.0.1.1:8006
+User-Agent: Go-http-client/1.1
+Content-Length: 58
+Accept: application/json
+Authorization: PVEAPIToken=hashicorp@pve!terraform=37d8880f-f5f1-40df-8130-ad9ca3ddcaa4
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip
+
+full=1&name=srv-app-1&newid=100&storage=vms&target=pve1-hw
+2024/02/03 14:38:32 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 88
+Cache-Control: max-age=0
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 03 Feb 2024 13:38:32 GMT
+Expires: Sat, 03 Feb 2024 13:38:32 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":"UPID:pve1-hw:00005BBA:0008815E:65BE41D8:qmclone:1001:hashicorp@pve!terraform:"}
+2024/02/03 14:38:32 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve1-hw/tasks/UPID:pve1-hw:00005BBA:0008815E:65BE41D8:qmclone:1001:hashicorp@pve!terraform:/status HTTP/1.1
+Host: 10.0.1.1:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=hashicorp@pve!terraform=37d8880f-f5f1-40df-8130-ad9ca3ddcaa4
+Accept-Encoding: gzip
+
+2024/02/03 14:38:32 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 258
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 03 Feb 2024 13:38:32 GMT
+Expires: Sat, 03 Feb 2024 13:38:32 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"id":"1001","type":"qmclone","node":"pve1-hw","pid":23482,"status":"running","upid":"UPID:pve1-hw:00005BBA:0008815E:65BE41D8:qmclone:1001:hashicorp@pve!terraform:","tokenid":"terraform","starttime":1706967512,"user":"hashicorp@pve","pstart":557406}}
+2024/02/03 14:38:34 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve1-hw/tasks/UPID:pve1-hw:00005BBA:0008815E:65BE41D8:qmclone:1001:hashicorp@pve!terraform:/status HTTP/1.1
+Host: 10.0.1.1:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=hashicorp@pve!terraform=37d8880f-f5f1-40df-8130-ad9ca3ddcaa4
+Accept-Encoding: gzip
+
+2024/02/03 14:38:34 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 258
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 03 Feb 2024 13:38:34 GMT
+Expires: Sat, 03 Feb 2024 13:38:34 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"status":"running","upid":"UPID:pve1-hw:00005BBA:0008815E:65BE41D8:qmclone:1001:hashicorp@pve!terraform:","id":"1001","node":"pve1-hw","type":"qmclone","pid":23482,"pstart":557406,"user":"hashicorp@pve","starttime":1706967512,"tokenid":"terraform"}}
+2024/02/03 14:38:36 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve1-hw/tasks/UPID:pve1-hw:00005BBA:0008815E:65BE41D8:qmclone:1001:hashicorp@pve!terraform:/status HTTP/1.1
+Host: 10.0.1.1:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=hashicorp@pve!terraform=37d8880f-f5f1-40df-8130-ad9ca3ddcaa4
+Accept-Encoding: gzip
+
+2024/02/03 14:38:36 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 258
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 03 Feb 2024 13:38:36 GMT
+Expires: Sat, 03 Feb 2024 13:38:36 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"starttime":1706967512,"user":"hashicorp@pve","pstart":557406,"tokenid":"terraform","upid":"UPID:pve1-hw:00005BBA:0008815E:65BE41D8:qmclone:1001:hashicorp@pve!terraform:","status":"running","id":"1001","pid":23482,"type":"qmclone","node":"pve1-hw"}}
+2024/02/03 14:38:38 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve1-hw/tasks/UPID:pve1-hw:00005BBA:0008815E:65BE41D8:qmclone:1001:hashicorp@pve!terraform:/status HTTP/1.1
+Host: 10.0.1.1:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=hashicorp@pve!terraform=37d8880f-f5f1-40df-8130-ad9ca3ddcaa4
+Accept-Encoding: gzip
+
+2024/02/03 14:38:38 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 258
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 03 Feb 2024 13:38:38 GMT
+Expires: Sat, 03 Feb 2024 13:38:38 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"id":"1001","type":"qmclone","node":"pve1-hw","pid":23482,"status":"running","upid":"UPID:pve1-hw:00005BBA:0008815E:65BE41D8:qmclone:1001:hashicorp@pve!terraform:","tokenid":"terraform","pstart":557406,"user":"hashicorp@pve","starttime":1706967512}}
+2024/02/03 14:38:40 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve1-hw/tasks/UPID:pve1-hw:00005BBA:0008815E:65BE41D8:qmclone:1001:hashicorp@pve!terraform:/status HTTP/1.1
+Host: 10.0.1.1:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=hashicorp@pve!terraform=37d8880f-f5f1-40df-8130-ad9ca3ddcaa4
+Accept-Encoding: gzip
+
+2024/02/03 14:38:40 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 258
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 03 Feb 2024 13:38:40 GMT
+Expires: Sat, 03 Feb 2024 13:38:40 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"tokenid":"terraform","user":"hashicorp@pve","pstart":557406,"starttime":1706967512,"id":"1001","type":"qmclone","node":"pve1-hw","pid":23482,"status":"running","upid":"UPID:pve1-hw:00005BBA:0008815E:65BE41D8:qmclone:1001:hashicorp@pve!terraform:"}}
+2024/02/03 14:38:42 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve1-hw/tasks/UPID:pve1-hw:00005BBA:0008815E:65BE41D8:qmclone:1001:hashicorp@pve!terraform:/status HTTP/1.1
+Host: 10.0.1.1:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=hashicorp@pve!terraform=37d8880f-f5f1-40df-8130-ad9ca3ddcaa4
+Accept-Encoding: gzip
+
+2024/02/03 14:38:42 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 258
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 03 Feb 2024 13:38:42 GMT
+Expires: Sat, 03 Feb 2024 13:38:42 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"id":"1001","type":"qmclone","node":"pve1-hw","pid":23482,"status":"running","upid":"UPID:pve1-hw:00005BBA:0008815E:65BE41D8:qmclone:1001:hashicorp@pve!terraform:","tokenid":"terraform","user":"hashicorp@pve","starttime":1706967512,"pstart":557406}}
+2024/02/03 14:38:44 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve1-hw/tasks/UPID:pve1-hw:00005BBA:0008815E:65BE41D8:qmclone:1001:hashicorp@pve!terraform:/status HTTP/1.1
+Host: 10.0.1.1:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=hashicorp@pve!terraform=37d8880f-f5f1-40df-8130-ad9ca3ddcaa4
+Accept-Encoding: gzip
+
+2024/02/03 14:38:44 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 276
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 03 Feb 2024 13:38:44 GMT
+Expires: Sat, 03 Feb 2024 13:38:44 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"starttime":1706967512,"pstart":557406,"user":"hashicorp@pve","exitstatus":"OK","tokenid":"terraform","status":"stopped","upid":"UPID:pve1-hw:00005BBA:0008815E:65BE41D8:qmclone:1001:hashicorp@pve!terraform:","id":"1001","node":"pve1-hw","type":"qmclone","pid":23482}}
+2024/02/03 14:39:14 >>>>>>>>>> REQUEST:
+GET /api2/json/nodes/pve1-hw/qemu/100/config HTTP/1.1
+Host: 10.0.1.1:8006
+User-Agent: Go-http-client/1.1
+Accept: application/json
+Authorization: PVEAPIToken=hashicorp@pve!terraform=37d8880f-f5f1-40df-8130-ad9ca3ddcaa4
+Accept-Encoding: gzip
+
+2024/02/03 14:39:14 <<<<<<<<<< RESULT:
+HTTP/1.1 200 OK
+Content-Length: 415
+Cache-Control: max-age=0
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+Date: Sat, 03 Feb 2024 13:39:14 GMT
+Expires: Sat, 03 Feb 2024 13:39:14 GMT
+Pragma: no-cache
+Server: pve-api-daemon/3.0
+
+{"data":{"name":"srv-app-1","scsihw":"virtio-scsi-pci","smbios1":"uuid=527cd231-dd12-4f3b-b20d-b72be7532ab5","digest":"b93de11847168c6552631dc2b6adcf5164b9761f","meta":"creation-qemu=8.1.2,ctime=1706907783","memory":"1024","ide2":"vms:vm-100-cloudinit,media=cdrom,size=4M","boot":"order=scsi0","vga":"serial0","scsi0":"vms:vm-100-disk-0,size=2G","serial0":"socket","vmgenid":"cf31f62c-7823-43fb-b2c6-53adb81d5d55"}}
