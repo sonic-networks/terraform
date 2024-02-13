@@ -30,7 +30,7 @@ resource "proxmox_vm_qemu" "cloudinit" {
   # nameserver              = "10.0.1.30 1.1.1.1"
   # searchdomain            = "${var.pve_node}.sonic hw.sonic"
   cicustom                = "user=local:snippets/user-data_vm-${each.key}.yaml,network=local:snippets/network-config_vm-${each.key}.yaml"
-  cloudinit_cdrom_storage = "local"
+  cloudinit_cdrom_storage = "local-lvm"
 }
 
 data "template_file" "user_data" {
