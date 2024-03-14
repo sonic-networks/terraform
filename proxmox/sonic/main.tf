@@ -7,9 +7,12 @@ resource "proxmox_vm_qemu" "cloudinit" {
   memory      = each.value.ram * 1024
   cores       = each.value.cpu
   os_type     = "cloud-init"
+  qemu_os     = "l26"
   sockets     = 1
   scsihw      = "virtio-scsi-pci"
-  agent       = 1
+  boot        = "order=scsi0;ide3"
+
+  agent = 1
   disks {
     scsi {
       scsi0 {
