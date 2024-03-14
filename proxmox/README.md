@@ -30,7 +30,7 @@ This script uses `agent` in `connection {}` blocks
   }
 ...
 ```
-which means when you look at terraform docs it describes its using keys from ssh-agent directly to connect to server. So if you not familiar what it is I encourage to know with it. 
+which means when you look at terraform docs it describes it's using keys from ssh-agent directly to connect to server. So if you not familiar what it is I encourage to get familiar with it. 
 
 Conclusion from above config is that without authorization against you proxmox server using private key this script will end up with `Still creating...` Why? Because SSH connections is used to put cloudinit snippets on proxmox server. So literally terraform lanunched from your computer will connect to proxmox specified in `var.pve_ip` and put prepared snippets from template into `/var/lib/vz/snippets` locations. 
 
